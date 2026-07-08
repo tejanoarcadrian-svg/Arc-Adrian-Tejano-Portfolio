@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0d1b2a; /* dark blue background */
+      color: #e0e1dd;      /* light text */
+    }
+    nav {
+      background: #1b263b;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #e0e1dd;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #a9d6e5;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #1b263b; /* container background */
+      border-radius: 10px;
+      text-align: center;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #0d1b2a;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+    h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #a9d6e5;
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #0d1b2a;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #0d1b2a;
+      color: #e0e1dd;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background: #415a77;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #0d1b2a;
+      color: #e0e1dd;
+      text-align: center;
+    }
+
+    /* About Me styling */
+    .about-text {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e0e1dd;
+    }
+
+    /* Hobbies card layout */
+    .hobby-cards {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .hobby-card {
+      background: #0d1b2a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hobby-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .hobby-card .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hobby-card h3 {
+      margin: 0.5rem 0;
+      color: #ffffff;
+    }
+    .hobby-card p {
+      font-size: 0.95rem;
+      color: #a9d6e5;
+    }
+
+    /* Education timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    .timeline-date {
+      flex: 0 0 150px;
+      font-weight: bold;
+      color: #a9d6e5;
+    }
+    .timeline-content {
+      background: #0d1b2a;
+      padding: 1rem;
+      border-radius: 8px;
+      flex: 1;
+      color: #e0e1dd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    .timeline-content h3 {
+      margin: 0;
+      color: #ffffff;
+    }
+    .timeline-content p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#education">Education</a>
+    <a href="#socials">Socials</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div class="container" id="home">
+    <img src="arc.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>ARC ADRIAN S. TEJANO</h1>
+    <p class="subtitle">Computer Science Student | Aspiring Programmer</p>
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        Hi, I'm Arc Adrian. Welcome to my personal portfolio! I am a Computer Science student who enjoys learning new technologies and creating projects that improve my programming skills.
+      </p>
+      <a href="#about" class="btn">Learn More</a>
+    </section>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="container" id="about">
+    <section>
+      <h2>About Me</h2>
+      <p class="about-text">
+        I am a Computer Science student passionate about programming. I enjoy diving into the logic behind software, mastering structural components from scratch, and building functional applications.
+      </p>
+      <p class="about-text">
+        Currently, I am expanding my skills across multiple environments, learning how to bridge backend logic with clean, user-friendly frontend designs.
+      </p>
+      <a href="#socials" class="btn">Connect with Me</a>
+    </section>
+  </div>
+
+  <!-- Hobbies Section -->
+  <div class="container" id="hobbies">
+    <section>
+      <h2>My Hobbies</h2>
+      <div class="hobby-cards">
+        <div class="hobby-card">
+          <div class="icon">♟️</div>
+          <h3>Playing Chess</h3>
+          <p>I enjoy playing chess to sharpen my mind and strategy skills.</p>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">🎧</div>
+          <h3>Listening to Music</h3>
+          <p>Music helps me relax and focus while studying or coding.</p>
+        </div>
+        <div class="hobby-card">
+          <div class="icon">🎨</div>
+          <h3>Drawing</h3>
+          <p>Drawing helps me calm down and express creativity.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Education Section -->
+  <div class="container" id="education">
+    <section>
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2024 – Present</div>
+          <div class="timeline-content">
+            <h3>Cagayan State University</h3>
+            <p>Bachelor of Science in Computer Science</p>
+            <p>Carig Campus, Tuguegarao City, Cagayan</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021 – 2024</div>
+          <div class="timeline-content">
+            <h3>Afusing Daga National High School</h3>
+            <p>Senior High – Computer Programming</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2017 – 2021</div>
+          <div class="timeline-content">
+            <h3>Afusing Daga National High School</h3>
+            <p>Junior High School</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2011 – 2017</div>
+          <div class="timeline-content">
+            <h3>Alcala West Central School</h3>
+            <p>Elementary</p>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- Socials Section -->
+  <div class="container" id="socials">
+    <section>
+      <h2>Socials</h2>
+      <ul>
+        <li><strong>Facebook:</strong> Adrian Tejano</li>
+        <li><strong>Instagram:</strong> ur_boyy_aku</li>
+        <li><strong>Email:</strong> tejanoarcadrian@example.com</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Arc Adrian Tejano | Personal Portfolio</p>
+  </footer>
+</body>
+</html>
